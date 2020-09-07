@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="Link.html">Link</a>
+    <h1>Form</h1>
+    <!--Action-->
+    <form action="http://www.example.com/">
+
+        <!--Text Input, Password Input, Date, Email, URL Input,
+             Grouping Form, Form Validation, Label-->
+        <fieldset>
+            <legend>User Details</legend>
+            <label for="usrnm">Username :
+                <input type="text" name="usrnm" maxlength="100" required="required" />
+            </label><br><br>
+            <label for="email">Email :
+                <input type="email" name="email" maxlength="100" required="required" />
+            </label><br><br>
+            <label for="pass">Password :
+                <input type="password" name="pass" maxlength="100" required="required"/>
+            </label><br><br>
+            <label for="birth">Birth Date :
+                <input type="date" name="birth" />
+            </label><br><br>
+            <label for="web">URL Website :
+                <input type="url" name="web" maxlength="100" required="required" />
+            </label><br><br>
+
+        </fieldset> 
+
+        <!--Text Area-->
+        <h4>Saran dan kritik</h4>
+        <textarea name="komentar" cols="30" rows="3" placeholder="Tuliskan disini."></textarea> 
+        
+        <!--Checkbox-->
+        <h4>Apa makanan favorit anda?
+            <br>
+            <input type="checkbox" name="makan" value="rendang" />Rendang
+            <input type="checkbox" name="makan" value="nasgor" />Nasi Goreng
+        </h4>
+
+        <!--Radio Button-->
+        <h4>Bagaimana kondisi anda hari ini?
+            <br>
+            <input type="radio" name="kondisi" value="sehat" />Sehat
+            <input type="radio" name="kondisi" value="sakit" />Sakit
+        </h4>
+
+        <!--Drop Down List Box-->
+        <h4>Tentukan brand HP teratas menurut anda</h4>
+        <select name="brand">
+            <option value="samsung">Samsung</option>
+            <option value="apple">Apple</option>
+            <option value="xiaomi">Xiaomi</option>
+            <option value="vivo">Vivo</option>
+        </select>
+
+        <!--Multiple Select Box-->
+        <h4>Tentukan brand HP favorit anda</h4>
+        <select name="brand" size="4" multiple="multiple">
+            <option value="samsung" selected="selected">Samsung</option>
+            <option value="apple">Apple</option>
+            <option value="xiaomi">Xiaomi</option>
+            <option value="vivo">Vivo</option>
+        </select>
+
+        <!--File Input Box, Submit Button-->
+        <h4>Silahkan upload foto 3x4 terbaru.</h4>
+        <input type="file" name="foto_3x4" /> <br>
+        <input type="submit" name="upload" value="Upload" />
+
+        <!--Image Button-->
+        <h4>Klik suka jika anda menyukai form ini</h4>
+        <input type="image" src="like.jpg" width="30" height="30" />
+        
+        <!--Hidden Field-->
+        <button><img src="delete.png" alt="delete" width="10" height="10" />Delete</button>
+        <input type="hidden" name="trash" value="data" />
+
+        <br><br>
+        <input type="submit" name="submit"/>
+    </form>
+</body>
+</html>
