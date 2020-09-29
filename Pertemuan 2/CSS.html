@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Cara penulisan CSS -->
+    <!-- External Style -->
+    <link rel="stylesheet" href="style.css" media="screen">
+
+    <title>Pertemuan 2</title>
+
+    <!-- Embedded Style -->
+    <style>
+        h3{
+            color:rgb(197, 40, 67);
+        }
+    </style>
+</head>
+<body>
+    <!-- Pengenalan CSS -->
+    <div>
+        <h1 class="title">Penulisan CSS</h1>
+        <h2 style="color:blue">Kalimat ini menggunakan Inline Style Sheet</h2>
+        <h3>Kalimat ini menggunakan Embedded Style Sheet</h3>
+        <h4>Kalimat ini menggunakan External Style Sheet</h4>
+        <!-- Class Selector -->
+        <h4 class="tulisan">Kalimat ini menggunakan style dengan Class Selector</h4>
+        <!-- ID Selector -->
+        <h4 id="kata">Kalimat ini menggunakan style dengan ID Selector</h4>
+        <!-- Child Selector -->
+        <ol>
+            <h3>List</h3>
+            <li>Ordered List</li>
+            <li>Unordered List</li>
+        </ol>
+        <!-- Descendant Selector -->
+        <div>
+            <h4 style="font-size: 20px;">Descendant Selector</h4>
+            <div>
+                <h4>Descendant Selector</h4>
+            </div>
+        </div>
+        <!-- Adjacent Sibling Selector -->
+        <h3>Adjacent Sibling Selector</h3>
+        <p>Adjacent Sibling Selector </p>
+        <!-- General Sibling Selector -->
+        <ul>
+            <li>Sibling 1</li>
+            <h4>SubSibling 1</h4>
+            <li>Sibling 2</li>
+            <li>Sibling 3</li>
+        </ul>
+    </div>
+    <!-- Font -->
+    <div>
+        <h1 class="title">Font</h1>
+        <p class="satu">Style font <span class="varian">pertama</span></p>
+        <p class="dua">Style font kedua</p>
+        <p class="tiga">Style font ketiga</p>
+    </div>
+    <!-- Text -->
+    <div>
+        <h1 class="title">Text</h1>
+        <p class="empat">Style Teks pertama</p>
+        <p class="lima">Style Teks kedua</p>
+    </div>
+    <!--Box Model, Border, Margin, dan Padding-->
+    <div>
+        <h1 class="title">Box Model, Border, Margin, dan Padding</h1>
+        <p class="enam">Box Model pertama</p>
+        <p class="tujuh">Box Model kedua</p>
+    </div>
+    <!-- Text Shadow, Text Transform, Letter Spacing, Word Spacing -->
+    <div>
+        <h1 class="title">Text Shadow, Text Transform, Letter Spacing, Word Spacing</h1>
+        <h3 class="delapan">
+            Style Text Shadow
+                Style Text Transform
+            Letter Spacing 
+                        Word Spacing
+        </h3>
+    </div>
+    <!-- White Space -->
+    <div>
+        <h1 class="title">White Space</h1>
+        <p class="normal">
+            Kalimat ini 
+                    menggunakan Style 
+                White Spacing 
+                                "Normal"</p>
+        <p class="pre">
+            Kalimat ini 
+                    menggunakan Style 
+                White Spacing 
+                                "Pre"</p>
+        <p class="pre-line">
+            Kalimat ini 
+            menggunakan Style 
+        White Spacing 
+                        "Pre-line"</p>
+        <p class="pre-warp">
+            Kalimat ini 
+                    menggunakan Style 
+                White Spacing 
+                                "Pre-warp"</p>
+        <p class="nowarp">
+            Kalimat ini 
+            menggunakan Style 
+        White Spacing 
+                        "Nowarp"</p>
+    </div>
+    <!-- Properti direction -->
+    <div>
+        <h1 class="title">Properti Direction</h1>
+        <p class="lr">Kalimat ini akan mulai mengalir dari kiri ke kanan</p>
+        <p class="rl">Kalimat ini akan mulai mengalir dari kanan ke kiri</p>
+    </div>
+    <!-- Properti Display -->
+    <div>
+        <h1 class="title">Properti Display</h1>
+        <h2>User dan programmer dapat melihat ini.</h2>
+        <h2 class="hilang">Hanya programmer yang bisa melihat ini.</h2>
+        <ul>
+            <p>Display Inline</p>
+            <li><button>Button 1</button></li>
+            <li><button>Button 2</button></li>
+            <li><button>Button 3</button></li>
+        </ul>
+        <p>Kalimat ini akan terpisah menjadi 2 baris <span>menggunakan display: block</span> </p>
+        <p>Disini akan dijelaskan bagaimana perbedaan antara menggunakan display:hidden
+            dan visibility:hidden
+        </p>
+        <p class="sembunyi">Hanya programmer yang bisa melihat ini</p>
+        <p>Jika menggunakan display, paragraf yang tidak terlihat
+            tidak akan memakan tempat, tetapi jika menggunakan 
+            visibility maka paragraf yanng tidak terlihat akan 
+            memakan tempat</p>
+    </div>
+    <!-- Properti Float -->
+    <div>
+        <h1 class="title">Properti Float</h1>
+        <p> Menggunakan float right pada image.
+            <img src="feather.svg" alt="feather">
+            Lorem ipsum dolor sit amet, consectetur 
+            adipiscing elit. Maecenas at odio eu augue 
+            maximus venenatis. Pellentesque aliquam 
+            ligula blandit neque interdum sodales quis 
+            ac ipsum. Nullam sit amet maximus enim, 
+            sed malesuada ante. Curabitur dictum 
+            eleifend ipsum. Quisque vel venenatis 
+            lectus. Aenean congue convallis augue, 
+            ultrices euismod augue pretium scelerisque. 
+            uam posuere leo enim, id vehicula neque commodo 
+            suscipit.
+        </p>
+    </div>
+    <!-- Properti Clear -->
+    <div>
+        <h1 class="title">Properti Clear</h1>
+        <div class="sembilan">Image</div>
+        <div class="sepuluh">Menggunakan properti clear right,
+            sehingga elemen diatas tidak menimpa elemen lain nya.
+        </div>
+        <br><br>
+        <div class="clear">
+            <div class="sembilan">Image</div>
+            Dengan menggunakan properti overflow auto, 
+            maka elemen diluar akan diperbaiki.
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+div {
+    background-color: rgb(243, 233, 214);
+}
+.title {
+    font-family: 'Courier New', Courier, monospace;
+}
+/* Penulisan komentar */
+h4 {
+     color: indigo; /*selector h4 akan diberi warna indigo */
+}
+/* Class Selector */
+.tulisan {
+    color: maroon;
+}
+/* ID Selector */
+#kata {
+    color: mediumseagreen;
+}
+/* Child Selector */
+ol > h3 {
+    text-decoration: underline;
+    color: black;
+    background-color: rgb(181, 232, 255);
+}
+/* Descendant Selector */
+div h4 {
+    border: solid 1px green;
+    border-radius: 5px;
+}
+/* Adjacent Sibling Selector */
+h3 + p {
+    border: solid 1px red;
+}
+/* General Sibling Selector */
+h4 ~ li {
+    border: solid 1px brown;
+}
+/* Font */
+.satu {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: smaller;
+    font-weight: bold;
+    font-style: italic;
+}
+.varian {
+    font-variant: small-caps;
+}
+.dua {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight: bolder;
+    font-style: oblique;
+}
+.tiga {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 100%;
+    font-weight: lighter;
+    font-style: normal;
+}
+/* Teks */
+.empat {
+    color: brown;
+    text-align: left;
+    vertical-align: super;
+    text-decoration: underline;
+    text-indent: 4em;
+}
+.lima {
+    color: rgb(236, 69, 228);
+    text-align: right;
+    vertical-align: middle;
+    text-decoration: line-through;
+    text-indent: 2em;
+}
+/* Box Model, Border, Margin, dan Padding */
+.enam {
+    margin: 50px;
+    border: solid 1px indianred;
+    border-radius: 10px;
+    padding: 30px;
+}
+.tujuh {
+    margin: 40px 0 50px 0;
+    border: dotted 10px indigo;
+    border-radius: 0;
+    padding: 40px 10px 20px 30px;
+}
+/* Text Shadow, Text Transform, Letter Spacing, WordSpacing */
+.delapan {
+    text-shadow: 2px 3px 4px teal;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    word-spacing: 1px;
+}
+/* White Spacing */
+.normal {
+    white-space: normal;
+}
+.pre {
+    white-space: pre;
+}
+.pre-line {
+    white-space: pre-line;
+}
+.pre-warp {
+    white-space: pre-wrap;
+}
+.nowarp {
+    white-space: nowrap;
+}
+/* Properti direction */
+.lr {
+    direction: ltr;
+}
+.rl {
+    direction: rtl;
+}
+/* Properti Display */
+.hilang {
+    display: none;
+}
+li {
+    display: inline;
+}
+span {
+    display: block;
+}
+.sembunyi {
+    visibility: hidden;
+}
+/* Properti Float */
+img {
+    float: right;
+    width: 100px;
+}
+/* Properti Clear */
+.sembilan {
+    float: right;
+    border: solid 1px blue;
+    width: 150px;
+    height: 75px;
+    margin: 5px;
+}
+.sepuluh {
+    border: solid 1px darkgreen;
+    clear: right;
+}
+.clear {
+    overflow: auto;
+    border: solid 1px darkgreen;
+}
