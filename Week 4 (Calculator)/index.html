@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <script type="application/javascript">
+        function additionFunc() {
+        var num1 = Number(document.getElementById("bilOne").value);
+        var num2 = Number(document.getElementById("bilTwo").value);
+        var hasil = num1 + num2;
+        document.getElementById("result").innerHTML = hasil;
+    }
+        function substractFunc() {
+        var num1 = Number(document.getElementById("bilOne").value);
+        var num2 = Number(document.getElementById("bilTwo").value);
+        var hasil = num1 - num2;
+        document.getElementById("result").innerHTML = hasil;
+    }
+        function multipleFunc() {
+        var num1 = Number(document.getElementById("bilOne").value);
+        var num2 = Number(document.getElementById("bilTwo").value);
+        var hasil = num1 * num2;
+        document.getElementById("result").innerHTML = hasil;
+    }
+        function divisionFunc() {
+        var num1 = Number(document.getElementById("bilOne").value);
+        var num2 = Number(document.getElementById("bilTwo").value);
+        var hasil = num1 / num2;
+        document.getElementById("result").innerHTML = hasil;
+    }
+    </script>
+
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container-fluid mx-auto">
+        <h2>Calculator</h2>
+    </div>
+    <div class="container mx-auto">
+        <div class="card mx-auto">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                <span class="input-group-text">Bilangan pertama</span>
+            </div>
+            <input type="number" class="form-control" id="bilOne">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                <span class="input-group-text">Bilangan kedua</span>
+            </div>
+            <input type="number" class="form-control" id="bilTwo">
+            </div>
+            <div class="op">
+                <button type="button" class="btn btn-light btn-lg" onclick="additionFunc()">+</button>
+                <button type="button" class="btn btn-light btn-lg" onclick="substractFunc()">-</button>
+                <button type="button" class="btn btn-light btn-lg" onclick="multipleFunc()">x</button>
+                <button type="button" class="btn btn-light btn-lg" onclick="divisionFunc()">/</button>
+            </div>
+            <br><br>
+            <div class="hasil">
+                <h3>Hasil</h3>
+                <br><br>
+                <h1 id="result">0</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
