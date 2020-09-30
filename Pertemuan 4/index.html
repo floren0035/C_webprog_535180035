@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+
+    <script>
+        function stabilo(id, style) {
+            document.getElementById(id).className = style;
+        }
+    </script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Introduction -->
+    <div>
+        <h1>Introduction</h1>
+        <!-- Alert -->
+        <button type="button" onclick='alert("Selamat Datang")'>
+            Tampilkan alert
+        </button>
+        <!-- Change Content -->
+        <button type="button" onclick='document.getElementById("text").innerHTML = "Berubah kan :)"'>
+            Coba saja
+        </button>
+        <p id="text">Kalimat ini akan berubah ketika anda klik tombol 'Coba saja'</p>
+        <!-- Change Style, JS in Body -->
+        <button type="button" onclick='huruf("gaya", "ubah")'>
+            Ubah Style
+        </button>
+        <p id="gaya">Font dari kalimat ini akan berubah ketika anda klik tombol 'Ubah Style'</p>
+        <!-- Change CSS Class, JS in Head -->
+        <button type="button" onclick='stabilo("stabilo", "mark")'>
+            Tambah Style
+        </button>
+        <button type="button" onclick='stabilo("stabilo", "normal")'>
+            Hilangkan Style
+        </button>
+        <p id="stabilo">Kalimat ini akan memiliki background color ketika anda klik tombol 'Tambah Style'</p>
+        <!-- Browse Log -->
+        <button type="button" onclick='log("Log this")'>
+            Ayo dicoba
+        </button>
+        <p id="logText">Kalimat ini akan berubah ketika anda klik tombol 'Ayo dicoba'</p>
+        <!-- Multielement -->
+        <br>
+        <p id="kata1">Bagaimana perubahannya?</p>
+        <p id="kata2">Bagaimana dengan yang ini?</p>
+        <button type="button" onclick='Multielement("hurufnya berwarna putih")'>Berubah</button>
+
+        <script>
+            function huruf(id, style){
+                document.getElementById(id).className = style;
+            }
+        </script>
+    </div>
+
+    <!-- Data Type -->
+    <div>
+        <h1>Data Type</h1>
+        <!-- Number -->
+        <p id="angka">Tebak angka yang ada di kalimat ini.</p>
+        <button type="button" onclick='Hitung("hitung", 20)'>Tebak Angka</button>
+        <br>
+        <!-- String -->
+        <p id="kalimat">Tebak kalimat yang ada di kalimat ini.</p>
+        <button type="button" onclick='ubahKalimat("kalimat", "Kamu", "Keren")'>Tebak Kalimat</button>
+        <br><br>
+        <!-- Arithmetic -->
+        <!-- tambah -->
+        <input type="number" id="add1"> +
+        <input type="number" id="add2">
+        <button type="button" onclick='Addition("hasilAdd", document.getElementById("add1").value, document.getElementById("add2").value)'>
+            Tambah
+        </button>
+        <input type="number" id="hasilAdd">
+        <br><br>
+        <!-- kurang -->
+        <input type="number" id="sub1"> -
+        <input type="number" id="sub2">
+        <button type="button" onclick='Sub("hasilSub", document.getElementById("sub1").value, document.getElementById("sub2").value)'>
+            Kurang
+        </button>
+        <input type="number" id="hasilSub">
+        <br><br>
+        <!-- Tugas dari asdos -->
+        <!-- Kali -->
+        <input type="number" id="kali1"> *
+        <input type="number" id="kali2">
+        <button type="button" onclick='Multi("hasilMulti", document.getElementById("kali1").value, document.getElementById("kali2").value)'>
+            Kali
+        </button>
+        <input type="number" id="hasilMulti">
+        <br><br>
+        <!-- Bagi -->
+        <input type="number" id="bagi1"> /
+        <input type="number" id="bagi2">
+        <button type="button" onclick='Div("hasilDiv", document.getElementById("bagi1").value, document.getElementById("bagi2").value)'>
+            Bagi
+        </button>
+        <input type="number" id="hasilDiv">
+        <br><br>
+        <!-- Modulo -->
+        <input type="number" id="mod1"> %
+        <input type="number" id="mod2">
+        <button type="button" onclick='Mod("hasilMod", document.getElementById("mod1").value, document.getElementById("mod2").value)'>
+            Moodulo
+        </button>
+        <input type="number" id="hasilMod">
+        <br><br>
+        <!-- Pangkat -->
+        <input type="number" id="pgkt1"> ^
+        <input type="number" id="pgkt2">
+        <button type="button" onclick='Pangkat("hasilPangkat", document.getElementById("pgkt1").value, document.getElementById("pgkt2").value)'>
+            Pangkat
+        </button>
+        <input type="number" id="hasilPangkat">
+        <br><br>
+    </div>
+
+    <!-- Syntax -->
+    <div>
+        <h1>Syntax</h1>
+        <!-- For Loops -->
+        <input type="number" id="loop" placeholder="Ketik berapa iterasi" width="400px">
+        <button type="button" onclick='Loop(document.getElementById("loop").value)'>Looping</button>
+        <p id="hasil"></p>
+        <br><br>
+        <!-- Array, In Loop, If-->
+        <input type="text" id="animal" placeholder="Tambahkan 3 hewan kesukaan">
+        <button type="button" onclick='Animal(document.getElementById("animal").value)'>Simpan</button>
+        <button type="button" onclick='arrLoop()'>Tampilkan</button>
+        <p id="hasilarr"></p>
+        <br><br>
+    </div>
+
+    <!-- Object -->
+    <div>
+        <h1>Object</h1>
+        <input type="text" id="email" placeholder="Masukkan Email">
+        <input type="text" id="NIM" placeholder="Masukkan NIM">
+        <input type="text" id="nama" placeholder="Masukkan Nama">
+        <button type="button" onclick='CreateObject(document.getElementById("email").value,
+            document.getElementById("NIM").value, document.getElementById("nama").value)'>
+            Create</button>
+        <br><br>
+        <button type="button" onclick='LoadObject()'>Load</button>
+        <input type="text" id="biodata" style="width: 500px;" readonly>
+        <br><br>
+    </div>
+
+    <!-- Invocation -->
+    <div>
+        <h1>Invocation</h1>
+        <a href="Invocation(lanjutan).html">Invocation Lanjutan</a> <br><br>
+        <button type="button" onclick='Increase()'>Increase</button>
+        <br><br>
+        <button type="button" onclick='Show()'>Show</button>
+        <p id="show"></p>
+        <br><br>
+        <!-- Function -->
+        <button type="button" onclick='obj1.add(3,4);'>Addition</button>
+        <br><br>
+        <button type="button" onclick='Show1()'>Show</button>
+        <p id="show1"></p>
+        <br><br>
+        <!-- Construction -->
+        <button type="button" onclick='document.getElementById("show2").innerHTML = child.value;'>
+            Addition</button>
+        <br>
+        <p id="show2"></p>
+        <br><br>
+        <!-- Apply -->
+        <button type="button" onclick='document.getElementById("show3").innerHTML = GetResult();'>
+            Addition</button>
+        <br>
+        <p id="show3"></p>
+    </div>
+</html>

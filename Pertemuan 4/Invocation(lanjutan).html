@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Invocation -->
+    <div>
+        <input type="text" id="email" placeholder="Masukkan Email">
+        <input type="text" id="NIM" placeholder="Masukkan NIM">
+        <input type="text" id="nama" placeholder="Masukkan Nama">
+        <button type="button" onclick='AddBioInfo(document.getElementById("email").value,
+            document.getElementById("NIM").value, document.getElementById("nama").value)'>
+            Add Bio Info</button>
+        <br><br>
+        <input type="text" id="animal" placeholder="Tambahkan hewan kesukaan">
+        <button type="button" onclick='AddAnimal(document.getElementById("animal").value)'>Simpan</button>
+        <br><br>
+        <button type="button" onclick='LoadObject()'>Load</button>
+        <input type="text" id="result" style="width: 500px;" readonly>
+        <br><br>
+        <a href="index.html">Back</a>
+    </div>
+
+    <script>
+        var Person = {
+            Email: "",
+            NIM: "",
+            Nama: "",
+            Animal: [],
+            AddBio: function (pEmail, pNIM, pNama) {
+                this.Email = pEmail;
+                this.NIM = pNIM;
+                this.Nama = pNama;
+            },
+            AddAnim: function (pAnimal) {
+                this.Animal.push(pAnimal);
+            },
+            Write: function () {
+                var str = "Bio: " + this.Email + ", " + this.NIM + ", " + this.Nama;
+                var anim = "Hewan: ";
+                var item;
+                for (item of this.Animal) {
+                    anim += item + " ";
+                }
+                return str + " " + anim;
+            }
+        }
+        function AddBioInfo(pEmail, pNIM, pNama) {
+            Person.AddBio(pEmail, pNIM, pNama);
+        }
+
+        function AddAnimal(pAnimal) {
+            Person.AddAnim(pAnimal);
+        }
+
+        function LoadObject() {
+            document.getElementById("result").value = Person.Write();
+        }
+    </script>
+</body>
+</html>

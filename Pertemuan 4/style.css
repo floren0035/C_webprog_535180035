@@ -1,0 +1,14 @@
+/* Introduction */
+.gaya {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.ubah {
+    font-family: 'Courier New', Courier, monospace;
+}
+.mark {
+    background-color: teal;
+    color: white;
+}
+.normal {
+    background-color: none;
+}
