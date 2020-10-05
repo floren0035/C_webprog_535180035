@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+
+    <title>DOM</title>
+</head>
+<body>
+    <!-- Akses DOM -->
+    <div>
+        <!-- GetElementById -->
+        <div>
+            <h1>Get Element By Id</h1>
+            <p id="kata1">Kata 1</p>
+        </div>
+
+        <!-- GetElementByTagName -->
+        <div>
+            <h1>Get Element By Tag Name</h1>
+            <h3>First</h3>
+            <p>First Paragraph</p>
+            <h3>Second</h3>
+            <p>Sceond Paragraph</p>
+            <button id="btnCount">Count h3</button>
+        </div>
+
+        <!-- GetElementByClassName -->
+        <div>
+            <h1>Get Element By Class Name</h1>
+            <h3 class="heading">Example 1</h3>
+            <h3 class="heading">Example 2</h3>
+        </div>
+
+        <!-- GetElementsByName -->
+        <div>
+            <h1>Get Element By Name</h1>
+            <p>
+                <input type="checkbox" name="cb" value="Radio">Radio
+                <input type="checkbox" name="cb" value="Television">Television
+                <input type="checkbox" name="cb" value="Handphone">Handphone
+            </p>
+            <button id="submit">Submit</button>
+        </div>
+
+        <!-- QuerySelector -->
+        <div>
+            <h1>Query Selector</h1>
+            <h1 class="satu">Heading 1</h1>
+            <h2 class="dua">Heading 2</h2>
+            <p class="tiga">Paragraph 1</p>
+            <p class="tiga">Paragraph 2</p>
+            <h3 class="empat">Heading 3</h3>
+            <h4 class="lima">Heading 4</h4>
+            <button onclick="myHeading()">Heading Selector</button>
+            <button onclick="myParagraph()">Paragraph Selector</button>
+            <button onclick="myGroup()">Group Selector</button>
+        </div>
+        <br><br>
+    </div>
+
+    <!-- Event Handling -->
+    <div>
+        <h1>Event Handling</h1>
+        <button type="button" id="tombol">Klik saja</button>
+    </div>
+
+    <!-- Intro DOM -->
+    <div>
+        <h1>Intro DOM</h1>
+        <p id="tipe">Klik tombol di bawah ini untuk mendapatkan tipe node dari kalimat ini.</p>
+        <button onclick="myFunc()">Cek disini</button>
+        <p id="demo"></p>
+    </div>
+
+    <!-- Manipulating Element -->
+    <div>
+        <h1>Manipulating Element</h1>
+    </div>
+
+    <!-- Traversy DOM -->
+    <div>
+        <h1>Traversy DOM</h1>
+        <!-- First Child -->
+        <div>
+            <ul id="menu">
+                <li class="first">Home</li>
+                <li>Products</li>
+                <li class="current">Support</li>
+                <li>News</li>
+                <li class="last">Contact</li>
+            </ul>
+        </div>
+        <!-- Parent Node -->
+        <div id="main">
+            <p class="note">Ini adalah catatan</p>
+        </div>
+    </div>
+
+    <script>
+        // GetElementById
+        const word1 = document.getElementById('kata1');
+        console.log(word1);
+        // GetElementByTagName
+        let btn = document.getElementById('btnCount');
+        btn.addEventListener('click', () => {
+            let headings = document.getElementsByTagName('h3');
+            alert(`The number of H3 tags: ${headings.length}`);
+        });
+        // GetElementByClassName
+        let element = document.getElementsByClassName('heading');
+        let data = [].map.call(element, el => el.textContent);
+        console.log(data);
+        // GetElementByName
+        var btn1 = document.getElementById('submit');
+        btn1.addEventListener('click', () => {
+            var choice = document.getElementsByName('cb');
+            choice.forEach((cb) => {
+                if (cb.checked) {
+                    alert(`You choose: ${cb.value}`);
+                }
+            })
+        });
+        // EventHandling
+        function btnClick() {
+            alert('button klik');
+        }
+        document.getElementById('tombol').addEventListener('click', btnClick);
+        // Manipulating Element
+        let div = document.createElement('div');
+        div.id = 'content';
+        div.className = 'classcontent';
+        // div.innerHTML = '<p>Contoh dari Create Element</p>';
+        let text = document.createTextNode('CreateElement menggunakan TextNode');
+        div.appendChild(text);
+        document.body.appendChild(div);
+        // First Child
+        let content = document.getElementById('menu');
+        let firstChild = content.firstChild.nodeName;
+        // console.log(firstChild);
+        console.log(content.firstElementChild);
+        console.log(content.lastElementChild);
+        let children = content.childNodes;
+        console.log(children);
+        // Parent Node
+        let note = document.querySelector('.note');
+        console.log(note.parentNode);
+    </script>
+</body>
+</html>
