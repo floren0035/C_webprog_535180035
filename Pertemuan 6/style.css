@@ -1,0 +1,26 @@
+.searchresults {
+    display: flex;
+    flex-wrap: wrap;
+}
+.card {
+    flex-wrap: wrap;
+    flex-direction: row;
+    border-radius: 10px;
+    box-shadow: 5px 7px #ebebeb;
+    width: 540px;
+    height: 220px;
+    margin: 20px auto;
+}
+.cover {
+    width: 150px;
+    height: 220px;
+    margin-right: 20px;
+}
+.imgstyle {
+    width: 150px;
+    height: 220px;
+    border-radius: 10px;
+}
+.desc {
+    font-size: small;
+}
